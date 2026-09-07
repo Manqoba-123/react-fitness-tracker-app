@@ -1,4 +1,3 @@
-// src/__tests__/integration/Navigation.test.jsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
