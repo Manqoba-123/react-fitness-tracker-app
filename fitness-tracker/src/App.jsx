@@ -1,6 +1,12 @@
+// src/App.jsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navigation/Navbar';
+
+// Common Components
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+
+// Pages
 import Home from './pages/Home';
 import ExercisesPage from './pages/ExercisesPage';
 import WorkoutPlannerPage from './pages/WorkoutPlannerPage';
@@ -9,20 +15,21 @@ import ProgressPage from './pages/ProgressPage';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
+    <div className="appLayout">
+      <Header />
+      
+      <main className="mainContent">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/exercises" element={<ExercisesPage />} />
           <Route path="/planner" element={<WorkoutPlannerPage />} />
           <Route path="/workout-planner" element={<WorkoutPlannerPage />} />
-          
-          {/* History and Progress Routes */}
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/progress" element={<ProgressPage />} />
         </Routes>
       </main>
+
+      <Footer />
     </div>
   );
 }
