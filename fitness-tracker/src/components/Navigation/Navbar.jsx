@@ -1,3 +1,4 @@
+// src/components/Navigation/Navbar.jsx
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
@@ -45,6 +46,26 @@ const Navbar = () => {
               }
             >
               Weekly Planner
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/history"
+              className={({ isActive }) =>
+                isActive ? `${styles.navItem} ${styles.active}` : styles.navItem
+              }
+            >
+              History
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/progress"
+              className={({ isActive }) =>
+                isActive ? `${styles.navItem} ${styles.active}` : styles.navItem
+              }
+            >
+              Progress
             </NavLink>
           </li>
         </ul>

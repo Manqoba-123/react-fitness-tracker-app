@@ -1,25 +1,28 @@
-// src/App.jsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navigation/Navbar';
 import Home from './pages/Home';
 import ExercisesPage from './pages/ExercisesPage';
 import WorkoutPlannerPage from './pages/WorkoutPlannerPage';
+import HistoryPage from './pages/HistoryPage';
+import ProgressPage from './pages/ProgressPage';
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/exercises" element={<ExercisesPage />} />
-        
-        {/* Route for /planner */}
-        <Route path="/planner" element={<WorkoutPlannerPage />} />
-        
-        {/* Route for /workout-planner to fix the missing route match */}
-        <Route path="/workout-planner" element={<WorkoutPlannerPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercises" element={<ExercisesPage />} />
+          <Route path="/planner" element={<WorkoutPlannerPage />} />
+          <Route path="/workout-planner" element={<WorkoutPlannerPage />} />
+          
+          {/* History and Progress Routes */}
+          <Route path="/history" element={<HistoryPage />} />
+          <Route path="/progress" element={<ProgressPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }
