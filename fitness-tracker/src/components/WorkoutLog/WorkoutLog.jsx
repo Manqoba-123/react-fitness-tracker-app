@@ -77,8 +77,11 @@ const WorkoutLog = () => {
       {/* Log Entry Form */}
       <form className={styles.logForm} onSubmit={handleAddLog}>
         <div className={styles.formGroup}>
-          <label className={styles.label}>Exercise Movement</label>
+          <label htmlFor="exercise-select" className={styles.label}>
+            Exercise Movement
+          </label>
           <select
+            id="exercise-select"
             value={selectedExerciseId}
             onChange={(e) => setSelectedExerciseId(e.target.value)}
             className={styles.select}
@@ -95,8 +98,11 @@ const WorkoutLog = () => {
 
         <div className={styles.formRow}>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Sets</label>
+            <label htmlFor="sets-input" className={styles.label}>
+              Sets
+            </label>
             <input
+              id="sets-input"
               type="number"
               min="1"
               value={sets}
@@ -106,8 +112,11 @@ const WorkoutLog = () => {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label}>Reps</label>
+            <label htmlFor="reps-input" className={styles.label}>
+              Reps
+            </label>
             <input
+              id="reps-input"
               type="number"
               min="1"
               value={reps}
@@ -117,8 +126,11 @@ const WorkoutLog = () => {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label}>Weight (lbs)</label>
+            <label htmlFor="weight-input" className={styles.label}>
+              Weight (lbs)
+            </label>
             <input
+              id="weight-input"
               type="number"
               min="0"
               step="2.5"
@@ -130,8 +142,11 @@ const WorkoutLog = () => {
         </div>
 
         <div className={styles.formGroup}>
-          <label className={styles.label}>Session Notes (Optional)</label>
+          <label htmlFor="notes-input" className={styles.label}>
+            Session Notes (Optional)
+          </label>
           <input
+            id="notes-input"
             type="text"
             placeholder="e.g. Felt great, hit new PR!"
             value={notes}
