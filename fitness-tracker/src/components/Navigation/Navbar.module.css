@@ -1,3 +1,5 @@
+/* src/components/Navigation/Navbar.module.css */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -8,6 +10,8 @@
   border-bottom: 1px solid var(--border-color);
   padding: 0.85rem 1.5rem;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navContainer {
@@ -16,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 /* Logo Styles */
@@ -27,7 +32,9 @@
   font-weight: 800;
   color: var(--text-white);
   letter-spacing: 1px;
+  text-decoration: none;
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .brandLogo:hover {
@@ -46,8 +53,10 @@
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navItem {
@@ -55,15 +64,17 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-secondary);
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.2rem;
+  text-decoration: none;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .navItem:hover {
   color: var(--accent-peach);
 }
 
-/* Active Link State with Peach Glow Indicator */
+/* Active Link State */
 .active {
   color: var(--text-white);
   font-weight: 700;
@@ -81,13 +92,33 @@
   box-shadow: 0 0 10px rgba(255, 107, 129, 0.6);
 }
 
+/* Mobile Screen Layout Adjustments */
 @media (max-width: 640px) {
+  .navbar {
+    padding: 0.6rem 0.5rem;
+  }
+
   .navContainer {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .navLinks {
-    gap: 1rem;
+    width: 100%;
+    justify-content: space-between; /* Evenly distributes links across screen width */
+    gap: 0.25rem;
+    padding: 0.2rem 0.25rem;
+    box-sizing: border-box;
+  }
+
+  .navItem {
+    font-size: 0.8rem; /* Slightly smaller font to guarantee zero edge cutoff */
+    padding: 0.25rem 0;
+  }
+
+  .active::after {
+    bottom: -2px;
+    height: 2px;
   }
 }
