@@ -1,0 +1,35 @@
+/* src/components/UI/Button.module.css */
+.button {
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+
+.primary {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(255, 107, 129, 0.4);
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 126, 95, 0.6);
+}
+
+.secondary {
+  background: var(--bg-card);
+  color: var(--text-white);
+  border: 2px solid var(--accent-peach);
+}
+
+.secondary:hover {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
