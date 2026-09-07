@@ -77,8 +77,11 @@ const WorkoutPlanner = () => {
       {/* Routine Builder Form */}
       <form className={styles.plannerForm} onSubmit={handleAddExercise}>
         <div className={styles.formGroup}>
-          <label className={styles.label}>Day</label>
+          <label htmlFor="day-select" className={styles.label}>
+            Day
+          </label>
           <select
+            id="day-select"
             value={selectedDay}
             onChange={(e) => setSelectedDay(e.target.value)}
             className={styles.select}
@@ -92,8 +95,11 @@ const WorkoutPlanner = () => {
         </div>
 
         <div className={styles.formGroup}>
-          <label className={styles.label}>Select Movement</label>
+          <label htmlFor="movement-select" className={styles.label}>
+            Select Movement
+          </label>
           <select
+            id="movement-select"
             value={selectedExerciseId}
             onChange={(e) => setSelectedExerciseId(e.target.value)}
             className={styles.select}
@@ -110,8 +116,11 @@ const WorkoutPlanner = () => {
 
         <div className={styles.formInlineGroup}>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Sets</label>
+            <label htmlFor="sets-input" className={styles.label}>
+              Sets
+            </label>
             <input
+              id="sets-input"
               type="number"
               min="1"
               max="20"
@@ -122,8 +131,11 @@ const WorkoutPlanner = () => {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label}>Reps / Mins</label>
+            <label htmlFor="reps-input" className={styles.label}>
+              Reps / Mins
+            </label>
             <input
+              id="reps-input"
               type="number"
               min="1"
               max="200"
