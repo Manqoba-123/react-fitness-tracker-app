@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navigation/Navbar.jsx';
-import Home from './pages/Home.jsx';
+import Navbar from './components/Navigation/Navbar';
+import Home from './pages/Home';
+import ExercisesPage from './pages/ExercisesPage';
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Placeholder routes for next steps */}
-        <Route path="/exercises" element={<div style={{ padding: '3rem', textAlign: 'center', color: '#fff' }}>Exercises Page Coming Next!</div>} />
-        <Route path="/workout-planner" element={<div style={{ padding: '3rem', textAlign: 'center', color: '#fff' }}>Weekly Planner Page Coming Soon!</div>} />
+        <Route path="/exercises" element={<ExercisesPage />} />
       </Routes>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button';
-import styles from './Exercise.module.css';
+import styles from './Exercises.module.css';
 
 const ExerciseCard = ({ exercise, onSelect }) => {
   const [showVideo, setShowVideo] = useState(false);

@@ -1,9 +1,10 @@
+// src/components/exercises/ExerciseList.jsx
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { EXERCISES_DATA } from '../../data/exercisesData';
 import ExerciseCard from './ExerciseCard';
 import Button from '../UI/Button';
-import styles from './Exercise.module.css';
+import styles from './Exercises.module.css';
 
 const ExerciseList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
