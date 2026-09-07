@@ -13,13 +13,13 @@ Follow these step-by-step instructions to clone, install dependencies, run, and 
 * **npm** (v7.0 or higher)
 
 ### 1. Clone the Repository
-``
+```
 git clone <react-fitness-tracker-app>
-``
+```
 
-``
+```
 cd fitness-tracker
-``
+```
 
 
 # React + Vite
