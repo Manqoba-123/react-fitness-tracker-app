@@ -6,7 +6,7 @@ import ExerciseCard from './ExerciseCard';
 import Button from '../UI/Button';
 import styles from './Exercises.module.css';
 
-const ExerciseList = () => {
+const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCategory = searchParams.get('category') || 'all';
 
@@ -29,13 +29,13 @@ const ExerciseList = () => {
     }
   };
 
-  const filteredExercises = EXERCISES_DATA.filter((exercise) => {
+  const filteredExercises = exercises.filter((exercise) => {
     const matchesCategory =
       selectedCategory === 'all' || exercise.category === selectedCategory;
     const matchesSearch =
-      exercise.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      exercise.muscleGroup.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      exercise.equipment.toLowerCase().includes(searchTerm.toLowerCase());
+      exercise.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      exercise.muscleGroup?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      exercise.equipment?.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesCategory && matchesSearch;
   });
