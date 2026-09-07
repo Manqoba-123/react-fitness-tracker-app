@@ -8,8 +8,9 @@ export const EXERCISES_DATA = [
     difficulty: 'Intermediate',
     equipment: 'Barbell, Bench',
     description: 'A classic upper-body compound power movement designed to maximize chest, shoulder, and tricep strength.',
-    videoUrl: 'https://www.youtube.com/embed/rT7DgCr-3pg', // Replace with local asset path if required
-    audioUrl: '/assets/audio/motivation_track_1.mp3',
+    videoUrl: 'https://www.youtube.com/embed/rT7DgCr-3pg',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3', // High-energy motivational beat
+    audioTitle: 'High Energy Power Boost'
   },
   {
     id: 'ex-2',
@@ -20,7 +21,8 @@ export const EXERCISES_DATA = [
     equipment: 'Barbell',
     description: 'The ultimate total-body strength builder targeting hamstrings, glutes, lower back, and core stability.',
     videoUrl: 'https://www.youtube.com/embed/op9kVnSso6Q',
-    audioUrl: '/assets/audio/motivation_track_1.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3', // Heavy workout synth
+    audioTitle: 'Heavy Lifting Focus'
   },
   {
     id: 'ex-3',
@@ -31,7 +33,8 @@ export const EXERCISES_DATA = [
     equipment: 'Dumbbells',
     description: 'Build shoulder power and upper-body balance while enforcing core stabilization.',
     videoUrl: 'https://www.youtube.com/embed/qEwKCR5JCog',
-    audioUrl: '/assets/audio/motivation_track_1.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3',
+    audioTitle: 'Push Harder Track'
   },
 
   // --- CARDIO CATEGORY ---
@@ -44,7 +47,8 @@ export const EXERCISES_DATA = [
     equipment: 'Bodyweight',
     description: 'Fast-paced metabolic conditioning drill that spikes heart rate and builds explosive leg power.',
     videoUrl: 'https://www.youtube.com/embed/ZZZbAOo1L34',
-    audioUrl: '/assets/audio/motivation_track_2.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2021/09/06/audio_8b21e8e25d.mp3', // Fast EDM workout pace
+    audioTitle: 'Cardio Sprint Cadence'
   },
   {
     id: 'ex-5',
@@ -55,7 +59,8 @@ export const EXERCISES_DATA = [
     equipment: 'Rower',
     description: 'Low-impact, high-intensity aerobic training engaging legs, back, and cardiovascular system.',
     videoUrl: 'https://www.youtube.com/embed/H0r_Zp4dEw8',
-    audioUrl: '/assets/audio/motivation_track_2.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2021/09/06/audio_8b21e8e25d.mp3',
+    audioTitle: 'Rhythm & Endurance Drive'
   },
 
   // --- FLEXIBILITY & RECOVERY ---
@@ -68,7 +73,8 @@ export const EXERCISES_DATA = [
     equipment: 'Mat',
     description: 'Essential mobility work for tight hips and glutes to improve squat range of motion and decrease lower back strain.',
     videoUrl: 'https://www.youtube.com/embed/n4p_O3YF_yM',
-    audioUrl: '/assets/audio/motivation_track_3.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3', // Relaxing ambient recovery flow
+    audioTitle: 'Mobility & Recovery Flow'
   },
   {
     id: 'ex-7',
@@ -79,6 +85,9 @@ export const EXERCISES_DATA = [
     equipment: 'Mat',
     description: 'A gentle spinal articulation movement designed to warm up the spinal column and reduce muscle tension.',
     videoUrl: 'https://www.youtube.com/embed/w_UKcI1F2Kw',
-    audioUrl: '/assets/audio/motivation_track_3.mp3',
-  },
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3',
+    audioTitle: 'Deep Breath Guidance'
+  }
 ];
+
+export default EXERCISES_DATA;

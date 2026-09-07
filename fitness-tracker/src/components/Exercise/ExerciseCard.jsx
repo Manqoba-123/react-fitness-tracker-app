@@ -1,9 +1,11 @@
+// src/components/Exercise/ExerciseCard.jsx
 import React, { useState } from 'react';
 import Button from '../UI/Button';
 import styles from './Exercises.module.css';
 
 const ExerciseCard = ({ exercise, onSelect }) => {
   const [showVideo, setShowVideo] = useState(false);
+  const [showAudio, setShowAudio] = useState(false);
 
   return (
     <div className={styles.card}>
@@ -20,13 +22,30 @@ const ExerciseCard = ({ exercise, onSelect }) => {
       </p>
       <p className={styles.description}>{exercise.description}</p>
 
+      {/* Action Buttons: Video & Audio Controls */}
       <div className={styles.cardActions}>
         <Button
           variant="secondary"
-          onClick={() => setShowVideo((prev) => !prev)}
+          onClick={() => {
+            setShowVideo((prev) => !prev);
+            if (showAudio) setShowAudio(false); // Close audio if video opens
+          }}
         >
           {showVideo ? 'Hide Video' : 'Watch Video 🎬'}
         </Button>
+
+        {exercise.audioUrl && (
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setShowAudio((prev) => !prev);
+              if (showVideo) setShowVideo(false); // Close video if audio opens
+            }}
+          >
+            {showAudio ? 'Hide Audio' : 'Motivation Track 🎵'}
+          </Button>
+        )}
+
         {onSelect && (
           <Button variant="primary" onClick={() => onSelect(exercise)}>
             Details
@@ -34,6 +53,7 @@ const ExerciseCard = ({ exercise, onSelect }) => {
         )}
       </div>
 
+      {/* Embedded Video Demo */}
       {showVideo && (
         <div className={styles.videoContainer}>
           <iframe
@@ -43,6 +63,19 @@ const ExerciseCard = ({ exercise, onSelect }) => {
             allowFullScreen
             className={styles.videoFrame}
           />
+        </div>
+      )}
+
+      {/* Audio Motivation Track Player */}
+      {showAudio && exercise.audioUrl && (
+        <div className={styles.audioContainer}>
+          <p className={styles.audioLabel}>
+            🎧 {exercise.audioTitle || 'Motivation Track'}:
+          </p>
+          <audio controls controlsList="nodownload" className={styles.audioPlayer}>
+            <source src={exercise.audioUrl} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       )}
     </div>
