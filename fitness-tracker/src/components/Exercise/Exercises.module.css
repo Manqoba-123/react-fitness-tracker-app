@@ -1,0 +1,260 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.controlsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1.25rem;
+  font-size: 1rem;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--accent-peach);
+  box-shadow: 0 0 12px rgba(255, 126, 95, 0.3);
+}
+
+.clearBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: var(--text-white);
+  border-color: var(--accent-pink);
+}
+
+.activeFilter {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(255, 107, 129, 0.35);
+}
+
+.exerciseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-peach);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.strength {
+  background-color: rgba(255, 107, 129, 0.2);
+  color: #ff6b81;
+}
+
+.cardio {
+  background-color: rgba(255, 126, 95, 0.2);
+  color: #ff7e5f;
+}
+
+.flexibility {
+  background-color: rgba(125, 211, 252, 0.2);
+  color: #7dd3fc;
+}
+
+.difficulty {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  color: var(--text-white);
+  margin-bottom: 0.4rem;
+}
+
+.cardMeta {
+  font-size: 0.85rem;
+  color: var(--accent-peach);
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.videoContainer {
+  margin-top: 1rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.videoFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+}
+
+.emptyState h3 {
+  color: var(--text-white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.detailOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.detailCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.audioPlayer {
+  margin-top: 1rem;
+}
+
+.audioPlayer h4 {
+  color: var(--text-white);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.audioPlayer audio {
+  width: 100%;
+}
