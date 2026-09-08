@@ -1,4 +1,3 @@
-// src/pages/ProgressPage.jsx
 import React, { useState, useEffect } from 'react';
 import {
   ResponsiveContainer,

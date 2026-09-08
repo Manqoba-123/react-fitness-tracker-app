@@ -1,4 +1,3 @@
-// src/components/common/Loading.jsx
 import React from 'react';
 import styles from './common.module.css';
 

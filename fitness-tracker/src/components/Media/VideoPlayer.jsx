@@ -1,4 +1,3 @@
-// src/components/Media/VideoPlayer.jsx
 import React, { useState, useRef } from 'react';
 import styles from './Media.module.css';
 

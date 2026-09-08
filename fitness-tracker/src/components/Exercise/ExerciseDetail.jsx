@@ -1,4 +1,3 @@
-// src/components/exercises/ExerciseDetail.jsx
 import React from 'react';
 import Button from '../UI/Button';
 import styles from './Exercises.module.css';

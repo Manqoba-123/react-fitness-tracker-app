@@ -1,4 +1,3 @@
-// src/components/common/Header.jsx
 import React from 'react';
 import Navbar from '../Navigation/Navbar';
 import styles from './common.module.css';

@@ -37,7 +37,6 @@ const Home = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    // Pick a random image for each category whenever the page loads
     const initialCards = [
       {
         id: 'strength',
