@@ -7,22 +7,27 @@ import styles from './Home.module.css';
 // Image pools for each training category
 const IMAGE_POOLS = {
   strength: [
-    'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80',
+    '/assets/images/strength-1.jpg',
+    '/assets/images/strength-2.jpg',
+    '/assets/images/strength-3.jpg',
+    '/assets/images/strength-4.jpg',
+    '/assets/images/strength-5.jpg',
+    '/assets/images/strength-6.jpg',
   ],
   cardio: [
-    'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80',
+   '/assets/images/cardio-1.jpg',
+    '/assets/images/cardio-2.jpg',
+    '/assets/images/cardio-3.jpg',
+    '/assets/images/cardio-4.jpg',
+    '/assets/images/cardio-5.jpg',
   ],
   flexibility: [
-    'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80',
+    '/assets/images/flexibility-1.jpg',
+    '/assets/images/flexibility-2.jpg',
+    '/assets/images/flexibility-3.jpg',
+    '/assets/images/flexibility-4.jpg',
+    '/assets/images/flexibility-5.jpg',
+    '/assets/images/flexibility-6.jpg',
   ],
 };
 
