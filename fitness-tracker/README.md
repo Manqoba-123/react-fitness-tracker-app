@@ -32,3 +32,17 @@ npm run dev
 ```
 npm test
 ```
+
+## Features
+- Weekly planner with localStorage persistence
+- Workout log with charts and media components
+- Exercises page with dynamic detail modal
+- Reusable components: SearchBar, Modal
+- PropTypes validation across components
+
+
+## Routes
+- `/` Home
+- `/exercises` Exercises list
+- `/exercises/:id` Exercise detail
+- `*` NotFound
