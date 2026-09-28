@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../UI/Button';
 import styles from './Exercises.module.css';
 
@@ -79,6 +80,22 @@ const ExerciseCard = ({ exercise, onSelect }) => {
       )}
     </div>
   );
+};
+
+ExerciseCard.propTypes = {
+  exercise: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string,
+    muscleGroup: PropTypes.string,
+    equipment: PropTypes.string,
+    difficulty: PropTypes.string,
+    description: PropTypes.string,
+    videoUrl: PropTypes.string,
+    audioUrl: PropTypes.string,
+    audioTitle: PropTypes.string,
+  }).isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default ExerciseCard;

@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { EXERCISES_DATA } from '../../data/exercisesData';
 import ExerciseCard from './ExerciseCard';
 import Button from '../UI/Button';
+import PropTypes from 'prop-types';
 import styles from './Exercises.module.css';
 
 const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
@@ -72,9 +73,8 @@ const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
           {['all', 'strength', 'cardio', 'flexibility'].map((category) => (
             <button
               key={category}
-              className={`${styles.filterBtn} ${
-                selectedCategory === category ? styles.activeFilter : ''
-              }`}
+              className={`${styles.filterBtn} ${selectedCategory === category ? styles.activeFilter : ''
+                }`}
               onClick={() => handleCategoryChange(category)}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -109,6 +109,11 @@ const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
       </section>
     </div>
   );
+};
+
+ExerciseList.propTypes = {
+  exercises: PropTypes.array,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default ExerciseList;

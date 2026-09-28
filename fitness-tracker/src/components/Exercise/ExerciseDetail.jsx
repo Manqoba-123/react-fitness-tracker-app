@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../UI/Button';
+import PropTypes from 'prop-types';
 import styles from './Exercises.module.css';
 
 const ExerciseDetail = ({ exercise, onClose }) => {
@@ -21,8 +22,8 @@ const ExerciseDetail = ({ exercise, onClose }) => {
   return (
     <div className={styles.detailOverlay}>
       <div className={styles.detailCard}>
-        <button 
-          className={styles.closeBtn} 
+        <button
+          className={styles.closeBtn}
           onClick={onClose}
           aria-label="Close detail modal"
         >
@@ -77,6 +78,22 @@ const ExerciseDetail = ({ exercise, onClose }) => {
       </div>
     </div>
   );
+};
+
+ExerciseDetail.propTypes = {
+  exercise: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+    muscleGroup: PropTypes.string,
+    equipment: PropTypes.string,
+    difficulty: PropTypes.string,
+    description: PropTypes.string,
+    instructions: PropTypes.arrayOf(PropTypes.string),
+    steps: PropTypes.arrayOf(PropTypes.string),
+    audioUrl: PropTypes.string,
+  }),
+  onClose: PropTypes.func,
 };
 
 export default ExerciseDetail;
