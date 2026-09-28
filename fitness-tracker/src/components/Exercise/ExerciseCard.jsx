@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../UI/Button';
+import Badge from '../UI/Badge';
 import styles from './Exercises.module.css';
 
 const ExerciseCard = ({ exercise, onSelect }) => {
@@ -10,9 +11,8 @@ const ExerciseCard = ({ exercise, onSelect }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
-        <span className={`${styles.badge} ${styles[exercise.category]}`}>
-          {exercise.category}
-        </span>
+        {/* Replace inline span with Badge */}
+        <Badge label={exercise.category} type={exercise.category || 'all'} />
         <span className={styles.difficulty}>{exercise.difficulty}</span>
       </div>
 
