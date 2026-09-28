@@ -11,6 +11,7 @@ import ExercisesPage from './pages/ExercisesPage';
 import WorkoutPlannerPage from './pages/WorkoutPlannerPage';
 import HistoryPage from './pages/HistoryPage';
 import ProgressPage from './pages/ProgressPage';
+import NotFound from './pages/NotFound'; 
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/workout-planner" element={<WorkoutPlannerPage />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/progress" element={<ProgressPage />} />
+           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
