@@ -11,6 +11,7 @@ import ExercisesPage from './pages/ExercisesPage';
 import WorkoutPlannerPage from './pages/WorkoutPlannerPage';
 import HistoryPage from './pages/HistoryPage';
 import ProgressPage from './pages/ProgressPage';
+import ExerciseDetail from './components/Exercise/ExerciseDetail.jsx';
 import NotFound from './pages/NotFound'; 
 
 function App() {
