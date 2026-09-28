@@ -3,10 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 import { EXERCISES_DATA } from '../../data/exercisesData';
 import ExerciseCard from './ExerciseCard';
 import Button from '../UI/Button';
+import SearchBar from '../UI/SearchBar';
 import PropTypes from 'prop-types';
 import styles from './Exercises.module.css';
 
-const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
+const ExerciseList = ({ exercises = EXERCISES_DATA, onSelect }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCategory = searchParams.get('category') || 'all';
 
@@ -51,30 +52,20 @@ const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
 
       {/* Controls: Search & Category Tabs */}
       <section className={styles.controlsSection}>
-        <div className={styles.searchWrapper}>
-          <input
-            type="text"
-            placeholder="Search exercises, muscle groups, equipment..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className={styles.searchInput}
-          />
-          {searchTerm && (
-            <button
-              className={styles.clearBtn}
-              onClick={() => setSearchTerm('')}
-            >
-              ✕
-            </button>
-          )}
-        </div>
+        <SearchBar
+          value={searchTerm}
+          onChange={setSearchTerm}
+          onClear={() => setSearchTerm('')}
+          placeholder="Search exercises, muscle groups, equipment..."
+        />
 
         <div className={styles.filterGroup}>
           {['all', 'strength', 'cardio', 'flexibility'].map((category) => (
             <button
               key={category}
-              className={`${styles.filterBtn} ${selectedCategory === category ? styles.activeFilter : ''
-                }`}
+              className={`${styles.filterBtn} ${
+                selectedCategory === category ? styles.activeFilter : ''
+              }`}
               onClick={() => handleCategoryChange(category)}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -88,7 +79,11 @@ const ExerciseList = ({ exercises = EXERCISES_DATA }) => {
         {filteredExercises.length > 0 ? (
           <div className={styles.exerciseGrid}>
             {filteredExercises.map((exercise) => (
-              <ExerciseCard key={exercise.id} exercise={exercise} />
+              <ExerciseCard 
+                key={exercise.id} 
+                exercise={exercise} 
+                onSelect={onSelect} 
+              />
             ))}
           </div>
         ) : (
